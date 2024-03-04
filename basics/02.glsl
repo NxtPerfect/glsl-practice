@@ -10,10 +10,12 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     uv *= iResolution.xy/iResolution.y;
     
     float d = length(uv);
-    float c = d;
+    float r = 0.3;
+    // float c = d;
+    float c = smoothstep(r, r-0.01, d);
     
-    if (d < .3) c = 1.;
-    else c = 0.;
+    // if (d < .3) c = 1.;
+    // else c = 0.;
 
     // Output to screen
     fragColor = vec4(vec3(c), 1.0);
