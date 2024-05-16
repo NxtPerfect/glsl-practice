@@ -8,8 +8,7 @@ float col(vec2 a, vec2 b, vec2 uv) {
     return float ((cos1 >= cos3)) * float ((cos2 >= cos3));
 }
 
-void mainImage( out vec4 fragColor, in vec2 fragCoord )
-{
+void mainImage( out vec4 fragColor, in vec2 fragCoord) {
     // Normalized pixel coordinates (from 0 to 1)
     vec2 uv = fragCoord / iResolution.xy;
     
